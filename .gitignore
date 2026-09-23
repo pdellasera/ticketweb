@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# build output
+dist
+dist-ssr
+
+# unused 3D models (regenerate with the asset tools if needed)
+*.glb
+
+# vercel local
+.vercel
+
+# misc
+*.local
+.DS_Store
+*.tsbuildinfo

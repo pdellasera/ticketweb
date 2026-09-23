@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand navy scale */
+  --color-navy-950: #061527;
+  --color-navy-900: #08192e;
+  --color-navy-850: #0b1f38;
+  --color-navy-800: #0f1b2d;
+  --color-navy-700: #102a4c;
+  --color-navy-600: #12306b;
+
+  /* Brand blue (matches the GameGate logo azure #007EF5) */
+  --color-brand-700: #0052a6;
+  --color-brand-600: #0068d1;
+  --color-brand-500: #007ef5;
+  --color-brand-400: #2f9bff;
+  --color-brand-300: #22b8e8;
+
+  /* Ink / text */
+  --color-ink-900: #0b1f38;
+  --color-ink-600: #5b6675;
+  --color-ink-400: #9aa3af;
+
+  /* Surfaces */
+  --color-line: #e7eaef;
+  --color-canvas: #f5f7fa;
+  --color-canvas-soft: #fafbfd;
+  --color-card: #ffffff;
+
+  /* Stadium zones (match the painted render) */
+  --color-zone-sursup: #2e8b3d;
+  --color-zone-estesup: #133a8e;
+  --color-zone-esteinf: #3d9be9;
+  --color-zone-surinf: #b3141c;
+  --color-zone-oestesup: #f5a0bc;
+  --color-zone-oesteinf: #e0008a;
+  --color-zone-balboa: #f5b0b4;
+  --color-zone-parking: #22b8e8;
+
+  /* Status */
+  --color-success: #16a34a;
+  --color-success-bg: #f0fdf4;
+  --color-danger: #e11d23;
+  --color-warning: #f59e0b;
+  --color-seat-occupied: #edeff2;
+  --color-seat-blocked: #3b4a63;
+
+  /* Radii */
+  --radius-card: 12px;
+  --radius-control: 8px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgba(11, 31, 56, 0.06), 0 8px 24px -12px rgba(11, 31, 56, 0.18);
+  --shadow-card-lg: 0 4px 12px rgba(11, 31, 56, 0.08), 0 24px 48px -24px rgba(11, 31, 56, 0.22);
+  --shadow-pop: 0 12px 32px -8px rgba(11, 31, 56, 0.28);
+
+  /* ===== Mobile Home (reference mock clone) ===== */
+  --color-mobile-bg: #fafcfd;
+  --color-mobile-line: #ebf1f9;
+  --color-mobile-nav: #f1f6fb;
+  --color-mobile-pill: #eaf0f8;
+  --color-mobile-azul: #0167fb;
+  --color-mobile-azul-bright: #068dff;
+  --color-mobile-azul-mark: #0171fc;
+  --color-mobile-ink: #0a0e2e;
+  --color-mobile-ink-soft: #2a3860;
+  --color-mobile-meta: #7d88a5;
+  --color-mobile-price: #050929;
+
+  /* ===== Mobile checkout (Seleccion1 clone) ===== */
+  --color-mobile-cta: #016ffe;
+  --color-mobile-step: #016cfe;
+  --color-mobile-step-inactive: #e4ebf6;
+  --color-mobile-step-num: #6b7a9c;
+  --color-mobile-sheet: #fdfdfe;
+  --color-zone-norte: #0064fd;
+  --color-zone-oriental: #fca227;
+  --color-zone-sur: #ec4c46;
+  --color-zone-occidental: #109648;
+  --color-zone-occidental-alta: #8635c6;
+
+  /* ===== Mobile checkout — Selecciona la zona (checkout unificado) ===== */
+  --color-checkout-ink: #00001f;
+  --color-stepper-line: #d9dff1;
+  --color-zona-card: #f6f8fc;
+  --color-zona-line: #e6eaf1;
+  --color-zona-sub: #46527b;
+  --color-zona-cta: #0069fe;
+  --color-zona-radio: #0067f9;
+  --color-zona-tooltip: #08122d;
+
+  /* ===== Mobile checkout — Pago (revisar_pago.png clone) ===== */
+  --color-pago-sub: #677196;
+  --color-pago-label: #7582a7;
+  --color-pago-total-bg: #eaf2fe;
+  --color-pago-safe: #0e9f5f;
+  --color-pago-buyer-bg: #eff7fe;
+  --color-pago-blue: #0167fb;
+
+  /* ===== Mobile checkout — Procesando / Confirmación ===== */
+  --color-pago-track: #d9e9fd;
+  --color-pago-secure-bg: #eef6fd;
+  --color-done-green: #0da461;
+  --color-done-ring: #c9eedd;
+  --color-done-ring-outer: #e5f6ee;
+  --color-confetti-green: #1db85d;
+  --color-confetti-mint: #b3e4c3;
+  --color-confetti-blue: #5a6db8;
+  --color-done-qr-bg: #eef4fe;
+
+  /* ===== Mobile calendar (calendario_screem.png clone) ===== */
+  --color-cal-bg: #f6f9fe;
+  --color-cal-card: #fafcfe;
+  --color-cal-ink: #0a0e2e;
+  --color-cal-label: #4c5a8a;
+  --color-cal-legend: #1a2b63;
+  --color-cal-muted: #b9c4dd;
+  --color-cal-blue: #0167fb;
+  --color-cal-pill: #e3effe;
+  --color-cal-pill-text: #0049fe;
+  --color-cal-arrow-bg: #f2f7fe;
+  --color-cal-count: #5f74a8;
+  --color-cat-deportes: #0068fc;
+  --color-cat-conciertos: #8a11dd;
+  --color-cat-teatro: #04ab5e;
+  --color-cat-otros: #fc040a;
+
+  /* ===== Mobile — Mis tickets (mis_tickets.png clone) ===== */
+  --color-ticket-sheet: #fdfdfe;
+  --color-ticket-nav: #fcfdfe;
+  --color-ticket-nav-line: #dfe6f2;
+  --color-ticket-pill: #e5f1fd;
+  --color-ticket-badge: #23ac62;
+  --color-ticket-border: #ecf1f9;
+  --color-ticket-icon: #8b94b2;
+
+  /* ===== Mobile — Ticket stub (TICKET.png clone) ===== */
+  --color-ticket-stub-bg: #eff1f3;
+  --color-ticket-map: #edf1f2;
+  --color-ticket-map-line: #e1e7e6;
+  --color-ticket-stub-ink: #111418;
+  --color-ticket-tear: #d7dde1;
+  --color-ticket-overlay: rgba(0,0,0,0.5);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas-soft);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Processing loader spin (self-contained, independent of Tailwind defaults). */
+@keyframes gg-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-gg-spin {
+  animation: gg-spin 0.9s linear infinite;
+}
