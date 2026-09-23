@@ -1,1 +1,0 @@
-feat: mobile-only gate and device detection
