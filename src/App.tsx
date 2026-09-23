@@ -1,7 +1,9 @@
 import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes, useParams, useSearchParams } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation, useParams, useSearchParams } from 'react-router-dom'
 
 import { Spinner } from '@/components/ui/Spinner'
+import MobileOnlyScreen from '@/features/mobile/MobileOnlyScreen'
+import { useIsMobile } from '@/hooks/useDevice'
 
 const LoginScreen = lazy(() => import('@/features/auth/LoginScreen'))
 const HomeScreen = lazy(() => import('@/features/events/HomeScreen'))
@@ -36,6 +38,16 @@ function AsientosRedirect() {
 }
 
 export default function App() {
+  const isMobile = useIsMobile()
+  const { pathname } = useLocation()
+  const isAdminConsole = pathname.startsWith('/consola') || pathname.startsWith('/estadio')
+
+  // The customer-facing ticketera is mobile-only; desktop visitors see a notice.
+  // The `/consola` admin panel stays available on desktop.
+  if (!isMobile && !isAdminConsole) {
+    return <MobileOnlyScreen />
+  }
+
   return (
     <Suspense fallback={<FullScreenLoader />}>
       <Routes>
